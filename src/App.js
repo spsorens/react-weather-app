@@ -6,8 +6,7 @@ import Footer from "./Footer";
 export default function App() {
   return (
     <div className="App">
-      <div className="container">
-        <h1>Weather Search Engine</h1>
+      <div className="container mt-3">
         <Search />
         <Footer />
       </div>

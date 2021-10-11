@@ -35,7 +35,7 @@ export default function Search() {
   let form = (
     <form onSubmit={handleSubmit}>
       <input type="text" placeholder="enter a city" onChange={updateCity} />
-      <input type="submit" value="search" />
+      <input type="submit" value="search" className="btn btn-dark" />
     </form>
   );
 
@@ -44,15 +44,19 @@ export default function Search() {
       <div className="weather">
         <div className="mt-3">
           {form}
+          <h1 className="city">{city}</h1>
+          <h4 className="datestamp">Sunday 17:07</h4>
           <div className="row mt-3">
             <ul className="col-6">
               <li>
-                <li>Temperature: {Math.round(weather.temperature)}°F</li>
+                <li className="temp">
+                  Temperature: {Math.round(weather.temperature)}°F
+                </li>
                 <img src={weather.icon} alt={weather.description} />
               </li>
             </ul>
 
-            <ul className="col-6">
+            <ul className="description col-6">
               <li>Description: {weather.description}</li>
               <li>Humidity: {weather.humidity}%</li>
               <li>Wind: {Math.round(weather.wind)}mph</li>
